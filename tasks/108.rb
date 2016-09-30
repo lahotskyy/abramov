@@ -2,7 +2,7 @@ require './funct.rb'
 
 def min_int_sq(num = 2)
   cond = Func.parse_yaml('./conditions.yml')
-  p cond['108']
+  p cond['108t']
   p 'Введіть n: '
   while n = gets.chomp
     break if n.to_i.to_s == n

@@ -2,7 +2,7 @@ require './funct.rb'
 
 def task331a
   cond = Func.parse_yaml('./conditions.yml')
-  p cond['331a']
+  p cond['331b']
   p 'Введіть n: '
   while n = gets.chomp
     break if (n.to_i.to_s == n) && (n.to_i >= 3)
