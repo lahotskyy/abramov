@@ -3,7 +3,6 @@ require 'pathname'
 require './funct.rb'
 
 class Abramov
-
   attr_reader :num
 
   def ask_for_task
