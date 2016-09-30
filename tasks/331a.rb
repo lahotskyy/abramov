@@ -1,5 +1,3 @@
-require './funct.rb'
-
 def task331a
   cond = Func.parse_yaml('./conditions.yml')
   p cond['331a']

@@ -1,6 +1,4 @@
-require './funct.rb'
-
-def min_int_sq(num = 2)
+def task108(num = 2)
   cond = Func.parse_yaml('./conditions.yml')
   p cond['108t']
   p 'Введіть n: '
@@ -14,5 +12,5 @@ def min_int_sq(num = 2)
   puts num
 end
 
-min_int_sq
+task108
 print "\n\n\n"

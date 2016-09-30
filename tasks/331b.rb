@@ -1,6 +1,4 @@
-require './funct.rb'
-
-def task331a
+def task331b
   cond = Func.parse_yaml('./conditions.yml')
   p cond['331b']
   p 'Введіть n: '
@@ -26,5 +24,5 @@ end
 
 
 
-task331a
+task331b
 print "\n\n\n"
