@@ -7,10 +7,10 @@ class Abramov
   attr_reader :num
 
   def ask_for_task
-    puts "Hello print please your task"
+    puts "Вітання! Оберіть, будь ласка, своє завдання"
     curFiles = Dir["./tasks/*"]
-    p "choose one of the task : "
-    curFiles.each {|i| puts i}
+    print "Доступні завдання: "
+    curFiles.each { |i| puts i.split('./tasks/') }
     @num = gets.chomp
   end
 end
@@ -18,6 +18,11 @@ end
 obj = Abramov.new
 while obj.num != '0'
   obj.ask_for_task
-  require './tasks/' + obj.num + '.rb'
+  begin
+    require './tasks/' + obj.num + '.rb'
+    puts 'Вправу виконано успішно! Бажаєте спробувати іншу? [y/n]'
+    rescue LoadError
+    puts "Вибачте, але вправа #{obj.num} відсутня. Спробуєте ввід ще раз? [y/n]"
+  end
+  gets.chomp == 'y' ? next : break
 end
-
