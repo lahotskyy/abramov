@@ -1,0 +1,37 @@
+require './funct.rb'
+require 'yaml'
+# доступаємось до умови
+
+def task331a
+  cond = Func.parse_yaml('./conditions.yml')
+  p cond['331a']
+  p 'Введіть n: '
+  while n = gets.chomp
+    break if (n.to_i.to_s == n) && (n.to_i >= 3)
+    puts "некоректні дані"
+  end
+  n = n.to_i
+  (1...n).each do |n1|
+    next unless Func.int_sqrt(n1)
+    remain = n - n1
+    break if remain <= 0
+    (1..remain).each do |n2|
+      next unless Func.int_sqrt(n2)
+      n3 = remain - n2
+      next unless Func.int_sqrt(n3)
+        # printing out sum of sqrt
+      print "#{n} = #{Math.sqrt(n1)}^2 + #{Math.sqrt(n2)}^2 + "
+      print "#{Math.sqrt(n3)}^2 \n"
+      return true
+    end
+  end
+end
+
+
+
+task331a
+
+
+  #tr = TripleSq.new
+  #triple_sq_sum(k.to_i)
+
