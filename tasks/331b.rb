@@ -20,7 +20,6 @@ def task331a
         # printing out sum of sqrt
       print "#{n} = #{Math.sqrt(n1)}^2 + #{Math.sqrt(n2)}^2 + "
       print "#{Math.sqrt(n3)}^2 \n"
-      return true
     end
   end
 end
