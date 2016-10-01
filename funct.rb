@@ -36,4 +36,23 @@ module Func
     end
     answ
   end
+
+  def self.perf(num)
+    sum = 0
+    (1...num).each do |i|
+      sum += i if (num % i).zero?
+    end
+    return true if sum == num
+  end
+
+  def self.nat_num
+    print 'Please insert natural number: =>'
+    user_num = gets.chomp.to_f
+    if user_num <= 0 || (user_num % 1).nonzero?
+      puts 'Number that you insert is not a natural number! Please try again.'
+      nat_num
+    else
+      @user_num = user_num
+    end
+  end
 end

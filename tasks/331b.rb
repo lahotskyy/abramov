@@ -2,8 +2,7 @@ def task331b
   cond = Func.parse_yaml('./conditions.yml')
   p cond['331b']
   p 'Введіть n: '
-  loop do
-    n = gets.chomp
+  while n = gets.chomp
     break if (n.to_i.to_s == n) && (n.to_i >= 3)
     print 'Некоректні дані, спробуйте ввід ще раз:'
   end

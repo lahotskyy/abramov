@@ -9,7 +9,7 @@ class Abramov
   def ask_for_task
     puts 'Вітання! Оберіть, будь ласка, своє завдання із доступних:'
     cur_files = Dir['./tasks/*']
-    cur_files.each { |i| puts i.split('./tasks/') }
+    cur_files.each { |i| i.split('./tasks/').each { |d| puts d.split('.rb') } }
     print 'Ваш варіант: '
     @num = gets.chomp
   end
