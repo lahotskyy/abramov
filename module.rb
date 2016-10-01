@@ -19,7 +19,7 @@ obj = Abramov.new
 while obj.num != '0'
   obj.ask_for_task
   begin
-      require './tasks/' + obj.num + '.rb'
+      load './tasks/' + obj.num + '.rb'
       puts 'Вправу виконано успішно! Бажаєте спробувати іншу? [y/n]'
     rescue LoadError
       puts "Вибачте, але вправа #{obj.num} відсутня.
