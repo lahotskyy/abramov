@@ -16,7 +16,7 @@ class Abramov
 end
 
 obj = Abramov.new
-while obj.num != '0'
+loop do
   obj.ask_for_task
   begin
       load './tasks/' + obj.num + '.rb'
