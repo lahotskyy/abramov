@@ -41,3 +41,5 @@
       a) How many digits in the number"
 86b: " Put the integer number n.
       b) How much is the sum of its digits."
+324t: "There are the integers p and q.
+      Get all the divisors of p that are coprime with q"

@@ -78,4 +78,36 @@ module Func
     sum = n.scan(/./).inject(0){|sum, x| sum + x.to_i}
     puts "Sum of digits is #{sum}."
   end
+
+  def self.beginning
+  puts "\n\sThis program searches for all the divisors of the integer p
+  \bthat are coprime with the integer q..."
+  puts "\n\sInput the integer p: \n\s>>"
+  end
+
+  def self.success
+    puts "\n\sThanks for using our program!!!\n\sHope you like it!!!"
+    puts "\sGOOD LUCK!!!"
+  end
+
+  def self.failure
+    puts "\n\sInput the correct value of the integers p and q, please!!!"
+    puts "\sp and q should be integers...\n\se.g. 7, 100, 5832...
+    NOT 2.5, 352.005, -152.5 ..."
+    task324
+  end
+
+  def self.coprime_divisors(p, q)
+    arr = []
+    (1..p.to_i).each do |i|
+      arr.push(i) if (p.to_i % i).zero?
+    end
+    puts "\n\sAll the divisors of #{p} that are coprime with #{q} are: \n"
+    arr.select! { |i| i.to_i.gcd(q.to_i) == 1 }
+    puts arr.empty? ? 'None' : arr
+  end
+
+  def self.input_integer(p, q)
+    p.match(/^[-+]?\d*$/) && q.match(/^[-+]?\d*$/)
+  end
 end
