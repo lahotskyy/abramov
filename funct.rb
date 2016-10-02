@@ -58,9 +58,9 @@ module Func
 
   def self.pyth_print(pyth_arr)
     count = pyth_arr.length / 3
-    puts "The Pythagoras numbers are:"
-    (1..count).each do | i |
-      puts "a = #{pyth_arr[3*i-3]}, b = #{pyth_arr[3*i-2]}, c = #{pyth_arr[3*i-1]}"
+    puts 'The Pythagoras numbers are:'
+    (1..count).each do |i|
+      puts "a = #{pyth_arr[3 * i - 3]}, b = #{pyth_arr[3 * i - 2]}, c = #{pyth_arr[3 * i - 1]}"
     end
     puts "Count of Pythagoras numbers are: #{count}."
   end
@@ -75,7 +75,7 @@ module Func
   end
 
   def self.sum_of_digits(n)
-    sum = n.scan(/./).inject(0){|sum, x| sum + x.to_i}
+    sum = n.to_s.scan(/./).inject(0){ |sum, x| sum + x.to_i }
     puts "Sum of digits is #{sum}."
   end
 
