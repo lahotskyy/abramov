@@ -55,4 +55,27 @@ module Func
       @user_num = user_num
     end
   end
+
+  def self.pyth_print(pyth_arr)
+    count = pyth_arr.length / 3
+    puts "The Pythagoras numbers are:"
+    (1..count).each do | i |
+      puts "a = #{pyth_arr[3*i-3]}, b = #{pyth_arr[3*i-2]}, c = #{pyth_arr[3*i-1]}"
+    end
+    puts "Count of Pythagoras numbers are: #{count}."
+  end
+
+  def self.pyth_not_exist
+    puts "The Pythagoras numbers don\'t exist."
+  end
+
+  def self.digits(n)
+    count = n.to_s.size
+    puts "The number have #{count} digits."
+  end
+
+  def self.sum_of_digits(n)
+    sum = n.scan(/./).inject(0){|sum, x| sum + x.to_i}
+    puts "Sum of digits is #{sum}."
+  end
 end

@@ -32,3 +32,12 @@
 561t: "Дано натуральне число n. Серед чисел (1,..,n) знайти всі такі, запис
       яких співпадає з останніми цифрами запису їх квадрату (наприклад,
       6**2 = 36, 25**2= 625 і т.д.)"
+554t: "Put the integer number n.
+      Find all Pythagorean triples of natural numbers,
+      each of which does not exceed n,'
+      that is all three positive integers a, b, c,
+      where a**2 + b**2 = c**2 (a <= b <= c <= n)"
+86a: "Put the integer number n.
+      a) How many digits in the number"
+86b: " Put the integer number n.
+      b) How much is the sum of its digits."
