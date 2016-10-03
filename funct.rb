@@ -16,7 +16,7 @@ module Func
   end
 
   def self.digits(n)
-    count = n.to_s.size
+    count = n.to_s.length
     puts "The number have #{count} digits."
   end
 
